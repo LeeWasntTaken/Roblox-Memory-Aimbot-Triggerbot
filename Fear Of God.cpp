@@ -1,4 +1,4 @@
-﻿#include <Windows.h>
+#include <Windows.h>
 #include <TlHelp32.h>
 #include <vector>
 #include <string>
@@ -8,10 +8,6 @@
 #include <chrono>
 
 #include "Offsets.hpp"
-
-#pragma comment( lib, "user32.lib" )
-
-#define REBASE( Base, Offset ) ( Base + Offset )
 
 struct Vector2
 {
@@ -369,8 +365,6 @@ void TriggerBot()
 
 int main()
 {
-
-    ShowWindow(GetConsoleWindow(), SW_HIDE);
 
     GameWindow = FindWindowA(nullptr, "Roblox");
     if (!GameWindow)
